@@ -3,10 +3,9 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   collection.each do |grocery_shelf_array|
-    grocery_self_array.each do |grocery_categories, item_info|
-        if grocery_categories[:item] == name
+        if grocery_shelf_array[:item] == name
           return grocery_shelf_array
-    end
+        end
   end
   return nil
 end
