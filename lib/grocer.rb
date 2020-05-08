@@ -23,7 +23,7 @@ def consolidate_cart(cart)
       consolidated_cart_array.each do |consolidated_info|
         binding.pry
         if grocery_info[:item] == consolidated_info[:item]
-          [consolidated_info][:count] => [consolidated_info][:count] + 1
+        #  [consolidated_info][:count] => [consolidated_info][:count] + 1
         end
       end
     end
