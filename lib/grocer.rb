@@ -20,7 +20,7 @@ def consolidate_cart(cart)
     else
       consolidated_cart_array.each do |consolidated_info|
         if grocery_info[:item] == consolidated_info[:item]
-          consolidated_cart_array[consolidated_info][:count] = consolidated_cart_array[consolidated_info][:count].to_i + 1
+          [consolidated_info][:count] = [:count] + 1
         end
       end
     end
