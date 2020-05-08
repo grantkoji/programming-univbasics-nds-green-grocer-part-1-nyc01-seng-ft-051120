@@ -1,4 +1,3 @@
-require_relative 'spec_helper'
 
 describe "Grocer" do
   # let() is like a global variable for tests
