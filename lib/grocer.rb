@@ -1,3 +1,5 @@
+require 'pry'
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -19,6 +21,7 @@ def consolidate_cart(cart)
       consolidated_cart_array << grocery_info.merge({:count => 1})
     else
       consolidated_cart_array.each do |consolidated_info|
+        binding.pry
         if grocery_info[:item] == consolidated_info[:item]
           [consolidated_info][:count] => [consolidated_info][:count] + 1
         end
