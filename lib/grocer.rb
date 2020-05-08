@@ -20,7 +20,7 @@ def consolidate_cart(cart)
         consolidated_cart_array << grocery_info.merge({:count => 1})
       end
     end
-    
+
   end
 
   consolidated_cart_array
