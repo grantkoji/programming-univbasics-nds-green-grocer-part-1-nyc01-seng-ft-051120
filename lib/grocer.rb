@@ -12,13 +12,16 @@ end
 
 def consolidate_cart(cart)
   consolidated_cart_array = []
-  cart.each do |grocery_individual_hash|
-    grocery_categories.each do |grocery_categories, item_info|
-      if consolidated_cart_array[]
-
-
+  cart.each do |grocery_info|
+    consolidated_cart_array.each do |consolidated_info|
+      if grocery_info[:item] == consolidated_info[:item]
+        consolidated_cart_array[consolidated_info][:count]+=1
+      end
     end
+    consolidated_cart_array << [grocery_info, :count => 1]
   end
+
+  consolidated_cart_array
   # Consult README for inputs and outputs
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
